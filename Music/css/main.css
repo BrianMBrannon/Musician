@@ -1,0 +1,334 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: white;
+}
+img{
+    display: inline-block;
+}
+
+header{
+    background-image: url(../images/header-background.png);
+    height: 1062px;
+    background-position: center;
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
+
+header nav{
+    background-color: rgba(0, 8, 12, 0.102);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+}
+
+header ul{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row, wrap;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    width: 60%;
+}
+header li{
+    list-style: none;
+}
+header li a{
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Dosis", sans-serif;
+    color: #606060;
+    text-transform: uppercase;
+    line-height: 3.487;
+    text-align: center;
+    margin: 0px;
+    letter-spacing: 1.5px;
+}
+header li a[class="selected"]{
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Dosis", sans-serif;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 3.487;
+    text-align: center;
+}
+header li a:hover{
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Dosis", sans-serif;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 3.487;
+    text-align: center;
+}
+
+header img{
+    /*The calculation below is subtracting the line height of
+    the li items.*/
+    padding-top: calc(219px - 3.487em);
+    margin-left: -20px;
+}
+
+section[id = "discography"]{
+    text-align: center;
+    background-image: url("../images/discography-background.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 1843px;
+}
+
+.main-title h1{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 50.49px;
+    letter-spacing: 4px;
+    font-family: "Dosis";
+    line-height: 1.174;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.main-title#discography h1{
+    color: transparent;
+    /*Code help from: http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
+    /*text background is: 896 x 370*/
+    background: url("../images/Light_Leak_uncut.png") repeat;
+    background-position: 0px 110.49px;
+    -webkit-background-clip: text;
+}
+
+.slash{
+    background-color: black;
+    height: 1px;
+    width: 500px;
+    margin: 3px 0px 3px 0px;
+}
+
+.main-title{
+    position: relative;
+    display: inline-block;
+    margin: 20px 65px 46px 65px;
+}
+.main-title .slash{
+    position: absolute;
+    left: -86.93px;
+    top: 30.25px;
+}
+
+#featured{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    margin: 0px 13vw 0px 18vw;
+}
+#featured >aside{
+    margin-right: 13px;
+}
+#featured >article{
+    margin-left: 13px;
+}
+
+.about{
+    margin-top: 0px;
+    width: 735px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.opening-text{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(121, 130, 133);
+    line-height: 1.734;
+    text-align: center;
+}
+.date{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgba(0, 0, 0, 0.651);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.734;
+    text-align: left;
+    width: 500px;
+    margin: 0px;
+}
+.title{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.734;
+    text-align: left;
+    width: 500px;
+    margin: 0px;
+}
+
+#featured article article >p{
+    font-size: 14.6px;
+    font-family: "Open Sans";
+    color: rgb(172, 172, 172);
+    line-height: 1.734;
+    text-align: left;
+    width: 672px;
+    margin: 0px;
+}
+#featured article article span{
+    display: block;
+    margin: 20px 0px 100px 0px;
+    justify-content: center;
+    align-items: center;
+}
+/*  Margins below decided by sight. 
+    Is there a better way?  */
+#featured aside #_2010{
+    margin-top: 50px;
+    margin-bottom: 354px;
+}
+#featured aside #_2012{
+    margin-bottom: 386px;
+}
+h2{
+    font-size: 23px;
+    font-family: "Open Sans";
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+    line-height: 1.355em;
+    text-align: left;
+}
+.audio{
+    width: 196px;
+    height: 56px;
+    margin: 0px;
+    padding: 0px;
+}
+/*I think the opacity might be a little off.*/
+._2010{
+    background: url("../images/audio-bg-2010.png");
+    opacity: 0.929;
+    /*For some strange reason the line below centers "Play"*/
+    border-style: solid;
+    background-color: rgb(0, 0, 0);
+    border-width: 1px;
+    border-color: rgb(99, 99, 99);
+}
+/*  The two elements below don't have borders
+    This is because the last element is smaller*/
+._2012{
+    background: url("../images/audio-bg-2012.png");
+    background-color: black;
+    opacity: 0.929;
+    border-style: solid;
+    background-color: rgb(0, 0, 0);
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+}
+._2015{
+    background: url("../images/audio-bg-2015.png");
+    opacity: 0.929;
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+}
+.light-bg{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.734;
+    text-align: justifyLeft;
+}
+.dark-bg{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.734;
+    text-align: justifyLeft;
+}
+
+section[id="concert-tours"]{
+    height: 1418px;
+    background: url("../images/concert-tours-background.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-top: 155px;
+}
+/*
+    Gradient: 62a2ad -> 8dbab3
+    solid, 100% smoothness and opacity
+    linear style
+    -90 degree angle
+    62% scale
+*/
+.main-title#concert-tours{
+    margin-top: 0px;
+}
+.main-title#concert-tours h1{
+    color: transparent;
+    /*text background is: 896 x 370*/
+    background: linear-gradient(#62a2ad 62%, #8dbab3);
+    background-position: 0px 110.49px;
+    -webkit-background-clip: text;
+}
+#concert-tours .opening-text{
+    letter-spacing: 1.5px;
+    width: 877.1px;
+}
+
+#concert-tours #featured{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+}
+#concert-tours #featured article{
+    margin: 0px;
+}
+#concert-tours #featured article >p{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(121, 130, 133);
+    line-height: 1.734;
+    text-align: left;
+}
+#concert-tours #featured article span{
+    display: block;
+    border-width: 1px;
+    border-color: rgba(99, 99, 99, 0.439);
+    border-style: solid;
+    text-align: center;
+    width: 196px;
+    height: 56px;
+}
+#concert-tours #featured article span p{
+    text-transform: none;
+}
+#latter-compositions{
+    
+}
+#new-tracks{
+    
+}
+#upcoming-events{
+    
+}
+#history{
+    
+}
+#contact-us{
+    
+}
