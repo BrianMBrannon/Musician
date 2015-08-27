@@ -111,13 +111,18 @@ section[id = "discography"]{
     width: 500px;
     margin: 3px 0px 3px 0px;
 }
-
+.slash.small{
+    background-color: black;
+    height: 1px;
+    width: 392px;
+    margin: 3px 0px 3px 0px;
+}
 .main-title{
     position: relative;
     display: inline-block;
     margin: 20px 65px 46px 65px;
 }
-.main-title .slash{
+.main-title#discography .slash{
     position: absolute;
     left: -86.93px;
     top: 30.25px;
@@ -135,9 +140,10 @@ section[id = "discography"]{
 }
 #featured >article{
     margin-left: 13px;
+    padding-top: 50px;
 }
 
-.about{
+.about-discography{
     margin-top: 0px;
     width: 735px;
     margin-left: auto;
@@ -265,7 +271,6 @@ section[id="concert-tours"]{
     background-position: bottom center;
     background-repeat: no-repeat;
     text-align: center;
-    margin-top: 155px;
 }
 /*
     Gradient: 62a2ad -> 8dbab3
@@ -275,7 +280,8 @@ section[id="concert-tours"]{
     62% scale
 */
 .main-title#concert-tours{
-    margin-top: 0px;
+    margin-top: 155px;
+    margin-bottom: 50px;
 }
 .main-title#concert-tours h1{
     color: transparent;
@@ -284,9 +290,18 @@ section[id="concert-tours"]{
     background-position: 0px 110.49px;
     -webkit-background-clip: text;
 }
+.main-title#concert-tours .slash{
+    position: absolute;
+    left: -59.625px;
+    top: 30.25px;
+}
+.about-concert-tours{
+    width: 877.1px;
+    margin: 0px auto 0px auto;
+}
 #concert-tours .opening-text{
     letter-spacing: 1.5px;
-    width: 877.1px;
+    margin-top: 0px;
 }
 
 #concert-tours #featured{
@@ -294,6 +309,9 @@ section[id="concert-tours"]{
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
+    margin: 460px 0px 0px 20vw; 
+    width: 665px;
+    /*left 400px*/
 }
 #concert-tours #featured article{
     margin: 0px;
@@ -305,8 +323,12 @@ section[id="concert-tours"]{
     line-height: 1.734;
     text-align: left;
 }
-#concert-tours #featured article span{
-    display: block;
+.action-box{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-width: 1px;
     border-color: rgba(99, 99, 99, 0.439);
     border-style: solid;
@@ -317,11 +339,117 @@ section[id="concert-tours"]{
 #concert-tours #featured article span p{
     text-transform: none;
 }
-#latter-compositions{
-    
+
+/*__________________________________________________________*/
+
+section[id='latter-compositions']{
+    height: 1987px;
+    text-align: center;
 }
+#latter-compositions.main-title{
+    margin-top: 145px;
+    margin-bottom: 35px;
+}
+#latter-compositions .main-title .slash{
+    position: absolute;
+    width: 600px;
+    left: -40.9295px;
+    top: 27px;
+}
+.about-latter-compositions{
+    max-width: 700px;
+    margin: 0px auto 155px auto;
+}
+.about-latter-compositions p{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(121, 130, 133);
+    line-height: 1.734;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#latter-compositions #featured{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+}
+.media-row{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f6;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.media-row aside{
+    flex: 1;
+}
+.media-row aside >div{
+    margin-left: 35px;
+}
+.media-row aside h2{
+    font-size: 23px;
+    font-family: "Open Sans";
+    color: rgb(0, 0, 0);
+    line-height: 1.055;
+    text-align: justifyLeft;
+    max-width: 505px;
+}
+p[class="content"]{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(121, 130, 133);
+    line-height: 1.734;
+    text-align: left;
+    max-width: 505px;
+}
+div[class="about-track"]{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-end
+}
+div[class="about-track"] .action-box{
+    margin-right: 33px;
+}
+div[class="about-track"] span{
+    display: flex;
+    align-items: center;
+}
+div[class="about-track"] span span{
+    margin-right: 20px;
+    margin-left: 9px;
+    font-size: 12px;
+    font-family: "Myriad Pro";
+    color: rgb(153, 153, 153);
+    line-height: 1.2;
+    align-self: center;
+}
+
+.media-row figure{
+    width: 600px;
+    height: 422px;
+    margin: 0px;
+    flex: 1;
+}
+.media-row#first figure{
+    background: url("../images/album-pic-1.png");
+}
+.media-row#second figure{
+    background: url("../images/album-pic-2.png");
+}
+.media-row#third figure{
+    background: url("../images/album-pic-3.png");
+}
+
+
 #new-tracks{
-    
+    height: 640px;
+    background: url("../images/new-tracks-background.png");
 }
 #upcoming-events{
     
