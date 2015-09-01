@@ -597,9 +597,86 @@ section[id="upcoming-events"]{
     margin-left: 50vw;
 }
 /**********************************************************/
-#history{
-    
+section[id='history']{
+    height: 1250px;
+    text-align: center;
+    background: url("../images/history-background.png") no-repeat bottom;
 }
-#contact-us{
-    
+.main-title#history {
+    font-size: 50.49px;
+    font-family: "Dosis";
+    color: rgb(91, 92, 90);
+    text-transform: uppercase;
+    line-height: 1.174;
+    text-align: center;
+    -moz-transform: matrix( 1.00034466841747,0,0,1,0,0);
+    -webkit-transform: matrix( 1.00034466841747,0,0,1,0,0);
+    -ms-transform: matrix( 1.00034466841747,0,0,1,0,0);
+    margin: 166px 0px 48px 0px;
+}
+#history .main-title .slash{
+    width: 270px;
+    position: absolute;
+    top: 27px;
+    left: -37px;
+}
+#history .opening-text{
+    display: block;
+    max-width: 815px;
+    margin: 0px auto 0px auto;
+    letter-spacing: 1.3px;
+}
+.timeline{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin: 165px 0px 25px 0px;
+}
+.timeline.date{
+    margin: 0px;
+    padding: 0px;
+    font-size: 35.49px;
+    font-family: "Dosis";
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.278);
+    text-transform: uppercase;
+    line-height: 1.67;
+    text-align: center;
+    letter-spacing: 3.5px;
+}
+.timeline.date#main{
+    color: rgb(87, 90, 89);
+}
+.bullet{
+    /*Flexbox distorts shapes quite a bit; this is a problem.*/
+    shape-outside: circle(50%);
+    width: 8px;
+    height: 8px;
+    background-color: rgb(90, 92, 91);
+}
+
+.timeline.slash{
+    border-width: 0.5px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    opacity: 0.278;
+    margin: 0px;
+}
+p[id="timeline-text"]{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(90, 90, 88);
+    text-align: center;
+    margin: 0px auto 0px auto;
+    width: 207px;
+    letter-spacing: 0px;
+    font-weight: 300;
+}
+
+/**********************************************************************/
+section[id='contact']{
+    height: 981px;
+    background: url("../images/contact-background.png") no-repeat bottom;
 }
