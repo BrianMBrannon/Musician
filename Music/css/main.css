@@ -264,7 +264,7 @@ h2{
     line-height: 1.734;
     text-align: justifyLeft;
 }
-
+/**************************************************************/
 section[id="concert-tours"]{
     height: 1418px;
     background: url("../images/concert-tours-background.png");
@@ -338,6 +338,63 @@ section[id="concert-tours"]{
 }
 #concert-tours #featured article span p{
     text-transform: none;
+}
+#latter-compositions figure{
+    position: relative;
+}
+.triangle.right{
+    /**https://css-tricks.com/snippets/css/css-triangle/**/
+    width: 0px;
+    height: 0px;
+    border-top: 11px solid transparent;
+	border-bottom: 11px solid transparent;
+	border-left: 13px solid #f5f6f6;
+    position: absolute;
+    top: 200px;
+}
+.triangle.left{
+    /**https://css-tricks.com/snippets/css/css-triangle/**/
+    width: 0px;
+    height: 0px;
+    border-top: 11px solid transparent;
+	border-bottom: 11px solid transparent;
+	border-right: 13px solid #f5f6f6;
+    position: absolute;
+    top: 200px;
+    right: 0px;
+}
+.video-bar{
+    margin-top: 375px;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-self: flex-end;
+}
+.video-time {
+    display: flex;
+}
+.video-bar .triangle{
+    position: static;
+}
+.progress-bar{
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  width: 401px;
+  height: 0;
+}
+.time{
+    font-size: 12px;
+    font-family: open-sans, sans-serif;
+    line-height: 2.023;
+    text-align: justifyLeft;
+}
+.time.end{
+    color: rgb(255, 255, 255);
+}
+.time.current{
+    color: rgb(134, 134, 134);
 }
 
 /*__________________________________________________________*/
@@ -448,11 +505,11 @@ div[class="about-track"] span span{
 
 /**************************************************************/
 
-#LAWL{
+#latter-compositions-about{
     height: 640px;
     background: url("../images/new-tracks-background.png");
 }
-#LAWL >div{
+#latter-compositions-about >div{
     text-align: center;
     padding-top: 160px;
 }
@@ -468,7 +525,7 @@ div[class="about-track"] span span{
         -ms-filter: "FlipH";
         /*http://snippetcentral.com/showing-reverse-image-css/*/
 }
-#LAWL h2{
+#latter-compositions-about h2{
     font-size: 18.49px;
     font-family: "Dosis";
     color: rgb(255, 255, 255);
@@ -479,7 +536,7 @@ div[class="about-track"] span span{
     margin-top: 33px;
     margin-bottom: 43px;
 }
-#LAWL p{
+#latter-compositions-about p{
     font-size: 14px;
     font-family: "Open Sans";
     color: rgb(121, 130, 133);
@@ -488,11 +545,40 @@ div[class="about-track"] span span{
     max-width: 515px;
     margin: 0px auto 0px auto;
 }
-#LAWL p[class="subcontent"]{
+#latter-compositions-about p[class="subcontent"]{
     font-family: "Open Sans";
     color: rgb(86, 94, 97);
     margin-top: 63px;
     /*padding-bottom: 88px;*/
+}
+#slider-nav{
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+}
+.fa-circle, .fa-circle-o{
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+.circle{
+    margin: 0px 19.25px 0px 19.25px;
+}
+.circle.open{
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+}
+.circle.closed{
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 9px;
+    height: 9px;
 }
 
 /**************************************************************/
@@ -626,15 +712,18 @@ section[id='history']{
     margin: 0px auto 0px auto;
     letter-spacing: 1.3px;
 }
-.timeline{
+#history >.timeline{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-    margin: 165px 0px 25px 0px;
+    margin: 165px 30px 25px 30px;
 }
-.timeline.date{
+/**Lesson learned: .class1.class2 effected by .class2 CSS
+        Must be careful about naming class names!! 
+**/
+#history .timeline-date{
     margin: 0px;
     padding: 0px;
     font-size: 35.49px;
@@ -645,24 +734,32 @@ section[id='history']{
     line-height: 1.67;
     text-align: center;
     letter-spacing: 3.5px;
+    width: 130px;
 }
-.timeline.date#main{
+#history .timeline-date#main{
     color: rgb(87, 90, 89);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
 }
 .bullet{
-    /*Flexbox distorts shapes quite a bit; this is a problem.*/
-    shape-outside: circle(50%);
+    /*Flexbox distorts shapes quite a bit; this is a problem.
+    SOLVED: CSS overlap issue; width was defined elsewhere.*/
     width: 8px;
     height: 8px;
     background-color: rgb(90, 92, 91);
+    border-radius: 50%;
+    margin: 0px 30px 0px 30px;
 }
 
 .timeline.slash{
-    border-width: 0.5px;
-    border-color: rgb(0, 0, 0);
-    border-style: solid;
-    opacity: 0.278;
+    height: 1px;
+    border-width: 0px;
+    background-color: rgba(0, 0, 0, 0.278);
     margin: 0px;
+    width: 145px;
+    position: static;
 }
 p[id="timeline-text"]{
     font-size: 14px;
@@ -679,4 +776,15 @@ p[id="timeline-text"]{
 section[id='contact']{
     height: 981px;
     background: url("../images/contact-background.png") no-repeat bottom;
+}
+
+#contact .main-title{
+    margin: 250px 0px 0px 50vw;
+    color: #454545;
+}
+#contact .main-title .slash{
+    left: 3px;
+}
+#contact section, #contact form{
+    margin-left: 50vw;
 }
