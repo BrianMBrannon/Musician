@@ -24,8 +24,17 @@ header nav{
     display: -ms-flexbox;
     display: flex;
     justify-content: center;
+    position: relative;
 }
-
+#current-page {
+    background-color: rgb(0, 0, 0);
+    width: 57px;
+    height: 2px;
+    position: absolute;
+    left: 376px;
+    top: 46px;
+    z-index: 10;
+}
 header ul{
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -778,6 +787,10 @@ section[id='contact']{
     background: url("../images/contact-background.png") no-repeat bottom;
 }
 
+.slash.vertical-contact{
+    width: 1px;
+    height: 193px;
+}
 #contact .main-title{
     margin: 250px 0px 0px 50vw;
     color: #454545;
@@ -787,4 +800,62 @@ section[id='contact']{
 }
 #contact section, #contact form{
     margin-left: 50vw;
+}
+#contact-info{
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(123, 123, 123);
+    margin-bottom: 75px;
+    margin-top: 25px;
+}
+#contact-content{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+#contact form{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 380px;
+    height: 222px;
+    justify-content: space-between;
+    margin-right: 120px;
+}
+input[type="text"]{
+    background: none;
+    font-size: 14px;
+    font-family: "Open Sans";
+    color: rgb(123, 123, 123);
+    border-width: 0px 0px 1px 0px;
+    border-color: rgb(0,0,0);
+    padding: 0px 0px 5px 0px;
+}
+input[type="submit"]{
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 53px;
+    height: 15px;
+    /*The lines below solved the issue of "SEND"
+    not fitting in its container.*/
+    padding: 0px;
+    line-height: 0px;
+    margin-top: -30px;
+}
+#contact aside{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 193px;
+    margin-left: 26px;
+}
+
+#social-media a:link, #social-media a:visited, #social-media a:hover, #social-media a:active {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
 }

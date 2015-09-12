@@ -20,6 +20,7 @@
                 <li><a href="#">History</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            <div id="current-page"></div>
         </nav>
         <img src="images/header-logo.png">
     </header>
@@ -383,12 +384,20 @@ hands-on control over how the site actually gets put together.</p>
             <p id="address">Canada Island, Division No. 23, Unorganized, MB, Canada</p>
             <p id="number">Tel. +1(778) 288 5180</p>
         </section>
-        <form>
-            <input type="text" name="Name" value="Name">
-            <input type="text" name="Email" value="Email">
-            <input type="text" name="Message" value="Message">
-            <input type="submit" value="Submit">
-        </form>
+        <div id="contact-content">
+            <form>
+                <input type="text" name="Name" value="Name">
+                <input type="text" name="Email" value="Email">
+                <input type="text" name="Message" value="Message">
+                <input type="submit" value="Send">
+            </form>
+            <div class="slash vertical-contact"></div>
+            <aside id="social-media">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </aside>
+        </div>
     </section>
     <!--  -------------------------------------------------------->
 </body>
