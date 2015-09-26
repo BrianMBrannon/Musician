@@ -1,0 +1,13 @@
+@media screen and (max-width: 1024px) {
+
+/*****************  HEADER  *********************/
+    #current-page{
+        display: none;
+    }
+    header nav{
+        display: none;
+    }
+    header img{
+        padding-top: 219px;
+    }
+}

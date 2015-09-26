@@ -9,111 +9,7 @@ img{
     display: inline-block;
 }
 
-header{
-    background-image: url(../images/header-background.png);
-    height: 1062px;
-    background-position: center;
-    position: relative;
-    align-content: center;
-    text-align: center;
-}
-
-header nav{
-    background-color: rgba(0, 8, 12, 0.102);
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-#current-page {
-    background-color: rgb(0, 0, 0);
-    width: 57px;
-    height: 2px;
-    position: absolute;
-    left: 376px;
-    top: 46px;
-    z-index: 10;
-}
-header ul{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: row, wrap;
-    justify-content: space-between;
-    margin: 0px;
-    padding: 0px;
-    width: 60%;
-}
-header li{
-    list-style: none;
-}
-header li a{
-    text-decoration: none;
-    font-size: 17px;
-    font-family: "Dosis", sans-serif;
-    color: #606060;
-    text-transform: uppercase;
-    line-height: 3.487;
-    text-align: center;
-    margin: 0px;
-    letter-spacing: 1.5px;
-}
-header li a[class="selected"]{
-    text-decoration: none;
-    font-size: 17px;
-    font-family: "Dosis", sans-serif;
-    color: rgb(0, 0, 0);
-    text-transform: uppercase;
-    line-height: 3.487;
-    text-align: center;
-}
-header li a:hover{
-    text-decoration: none;
-    font-size: 17px;
-    font-family: "Dosis", sans-serif;
-    color: rgb(0, 0, 0);
-    text-transform: uppercase;
-    line-height: 3.487;
-    text-align: center;
-}
-
-header img{
-    /*The calculation below is subtracting the line height of
-    the li items.*/
-    padding-top: calc(219px - 3.487em);
-    margin-left: -20px;
-}
-
-section[id = "discography"]{
-    text-align: center;
-    background-image: url("../images/discography-background.png");
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    height: 1843px;
-}
-
-.main-title h1{
-    display: inline-block;
-    font-weight: 500;
-    font-size: 50.49px;
-    letter-spacing: 4px;
-    font-family: "Dosis";
-    line-height: 1.174;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0px;
-}
-
-.main-title#discography h1{
-    color: transparent;
-    /*Code help from: http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html */
-    /*text background is: 896 x 370*/
-    background: url("../images/Light_Leak_uncut.png") repeat;
-    background-position: 0px 110.49px;
-    -webkit-background-clip: text;
-}
-
+/******** SLASHES FOR VARIOUS LAYOUT NEEDS *********/
 .slash{
     background-color: black;
     height: 1px;
@@ -126,45 +22,31 @@ section[id = "discography"]{
     width: 392px;
     margin: 3px 0px 3px 0px;
 }
-.main-title{
-    position: relative;
-    display: inline-block;
-    margin: 20px 65px 46px 65px;
+.slash.mini{
+    width: 135px;
 }
-.main-title#discography .slash{
-    position: absolute;
-    left: -86.93px;
-    top: 30.25px;
+.slash.vertical-top{
+    height: 50px;
+    width: 1px;
+    margin: 0px 36px 0px 35px;
 }
-
-#featured{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    margin: 0px 13vw 0px 18vw;
-}
-#featured >aside{
-    margin-right: 13px;
-}
-#featured >article{
-    margin-left: 13px;
-    padding-top: 50px;
+.slash.vertical-bottom{
+    height: 165px;
+    margin: 0px 36px 20px 35px;
+    width: 1px;
 }
 
-.about-discography{
-    margin-top: 0px;
-    width: 735px;
-    margin-left: auto;
-    margin-right: auto;
-}
+/******** BASIC TEXT FORMATTING ********/
 .opening-text{
     font-size: 14px;
     font-family: "Open Sans";
     color: rgb(121, 130, 133);
     line-height: 1.734;
     text-align: center;
+    letter-spacing: 1.5px;
+    margin-top: 0px;
 }
+
 .date{
     font-size: 14px;
     font-family: "Open Sans";
@@ -176,11 +58,12 @@ section[id = "discography"]{
     width: 500px;
     margin: 0px;
 }
+/** The size was 14px, but I changed it to 13px due to a font issue **/
 .title{
-    font-size: 14px;
-    font-family: "Open Sans";
+    font-size: 13px;
+    font-family: open-sans-bold, sans-serif;
+    font-weight: 800;
     color: rgb(0, 0, 0);
-    font-weight: bold;
     text-transform: uppercase;
     line-height: 1.734;
     text-align: left;
@@ -188,30 +71,6 @@ section[id = "discography"]{
     margin: 0px;
 }
 
-#featured article article >p{
-    font-size: 14.6px;
-    font-family: "Open Sans";
-    color: rgb(172, 172, 172);
-    line-height: 1.734;
-    text-align: left;
-    width: 672px;
-    margin: 0px;
-}
-#featured article article span{
-    display: block;
-    margin: 20px 0px 100px 0px;
-    justify-content: center;
-    align-items: center;
-}
-/*  Margins below decided by sight. 
-    Is there a better way?  */
-#featured aside #_2010{
-    margin-top: 50px;
-    margin-bottom: 354px;
-}
-#featured aside #_2012{
-    margin-bottom: 386px;
-}
 h2{
     font-size: 23px;
     font-family: "Open Sans";
@@ -219,42 +78,9 @@ h2{
     font-weight: normal;
     line-height: 1.355em;
     text-align: left;
-}
-.audio{
-    width: 196px;
-    height: 56px;
     margin: 0px;
-    padding: 0px;
 }
-/*I think the opacity might be a little off.*/
-._2010{
-    background: url("../images/audio-bg-2010.png");
-    opacity: 0.929;
-    /*For some strange reason the line below centers "Play"*/
-    border-style: solid;
-    background-color: rgb(0, 0, 0);
-    border-width: 1px;
-    border-color: rgb(99, 99, 99);
-}
-/*  The two elements below don't have borders
-    This is because the last element is smaller*/
-._2012{
-    background: url("../images/audio-bg-2012.png");
-    background-color: black;
-    opacity: 0.929;
-    border-style: solid;
-    background-color: rgb(0, 0, 0);
-    border-width: 1px;
-    border-color: rgb(255, 255, 255);
-}
-._2015{
-    background: url("../images/audio-bg-2015.png");
-    opacity: 0.929;
-    border-style: solid;
-    background-color: rgb(255, 255, 255);
-    border-width: 1px;
-    border-color: rgb(255, 255, 255);
-}
+
 .light-bg{
     font-size: 14px;
     font-family: "Open Sans";
@@ -273,84 +99,16 @@ h2{
     line-height: 1.734;
     text-align: justifyLeft;
 }
-/**************************************************************/
-section[id="concert-tours"]{
-    height: 1418px;
-    background: url("../images/concert-tours-background.png");
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    text-align: center;
-}
-/*
-    Gradient: 62a2ad -> 8dbab3
-    solid, 100% smoothness and opacity
-    linear style
-    -90 degree angle
-    62% scale
-*/
-.main-title#concert-tours{
-    margin-top: 155px;
-    margin-bottom: 50px;
-}
-.main-title#concert-tours h1{
-    color: transparent;
-    /*text background is: 896 x 370*/
-    background: linear-gradient(#62a2ad 62%, #8dbab3);
-    background-position: 0px 110.49px;
-    -webkit-background-clip: text;
-}
-.main-title#concert-tours .slash{
-    position: absolute;
-    left: -59.625px;
-    top: 30.25px;
-}
-.about-concert-tours{
-    width: 877.1px;
-    margin: 0px auto 0px auto;
-}
-#concert-tours .opening-text{
-    letter-spacing: 1.5px;
-    margin-top: 0px;
-}
-
-#concert-tours #featured{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    margin: 460px 0px 0px 20vw; 
-    width: 665px;
-    /*left 400px*/
-}
-#concert-tours #featured article{
-    margin: 0px;
-}
-#concert-tours #featured article >p{
+.content{
     font-size: 14px;
     font-family: "Open Sans";
     color: rgb(121, 130, 133);
     line-height: 1.734;
     text-align: left;
+    max-width: 505px;
 }
-.action-box{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-width: 1px;
-    border-color: rgba(99, 99, 99, 0.439);
-    border-style: solid;
-    text-align: center;
-    width: 196px;
-    height: 56px;
-}
-#concert-tours #featured article span p{
-    text-transform: none;
-}
-#latter-compositions figure{
-    position: relative;
-}
+
+/****************** TRIANGLES FOR LAYOUT *******************/
 .triangle.right{
     /**https://css-tricks.com/snippets/css/css-triangle/**/
     width: 0px;
@@ -372,13 +130,15 @@ section[id="concert-tours"]{
     top: 200px;
     right: 0px;
 }
+
+/******************** MEDIA STYLES ********************/
 .video-bar{
-    margin-top: 375px;
-    bottom: 100px;
+    margin: 355px auto 0px auto;
+    /*bottom: 100px;*/
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    align-self: flex-end;
+    justify-content: space-between;
+    width: 89%;
 }
 .video-time {
     display: flex;
@@ -405,457 +165,11 @@ section[id="concert-tours"]{
 .time.current{
     color: rgb(134, 134, 134);
 }
-
-/*__________________________________________________________*/
-
-section[id='latter-compositions']{
-    height: 1987px;
-    text-align: center;
-}
-#latter-compositions.main-title{
-    margin-top: 145px;
-    margin-bottom: 35px;
-}
-#latter-compositions .main-title .slash{
-    position: absolute;
-    width: 600px;
-    left: -40.9295px;
-    top: 27px;
-}
-.about-latter-compositions{
-    max-width: 700px;
-    margin: 0px auto 155px auto;
-}
-.about-latter-compositions p{
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: rgb(121, 130, 133);
-    line-height: 1.734;
-    text-align: center;
-    letter-spacing: 2px;
-}
-#latter-compositions #featured{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    width: 1200px;
-}
-.media-row{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    background-color: #f5f5f6;
-    margin-bottom: 50px;
-    align-items: center;
-}
-.media-row aside{
-    flex: 1;
-}
-.media-row aside >div{
-    margin-left: 35px;
-}
-.media-row aside h2{
-    font-size: 23px;
-    font-family: "Open Sans";
-    color: rgb(0, 0, 0);
-    line-height: 1.055;
-    text-align: justifyLeft;
-    max-width: 505px;
-}
-p[class="content"]{
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: rgb(121, 130, 133);
-    line-height: 1.734;
-    text-align: left;
-    max-width: 505px;
-}
-div[class="about-track"]{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: flex-start;
-    align-items:flex-end
-}
-div[class="about-track"] .action-box{
-    margin-right: 33px;
-}
-div[class="about-track"] span{
-    display: flex;
-    align-items: center;
-}
-div[class="about-track"] span span{
-    margin-right: 20px;
-    margin-left: 9px;
-    font-size: 12px;
-    font-family: "Myriad Pro";
-    color: rgb(153, 153, 153);
-    line-height: 1.2;
-    align-self: center;
-}
-
-.media-row figure{
-    width: 600px;
-    height: 422px;
-    margin: 0px;
-    flex: 1;
-}
-.media-row#first figure{
-    background: url("../images/album-pic-1.png");
-}
-.media-row#second figure{
-    background: url("../images/album-pic-2.png");
-}
-.media-row#third figure{
-    background: url("../images/album-pic-3.png");
-}
-
-/**************************************************************/
-
-#latter-compositions-about{
-    height: 640px;
-    background: url("../images/new-tracks-background.png");
-}
-#latter-compositions-about >div{
-    text-align: center;
-    padding-top: 160px;
-}
-.bolt{
-    margin: 0px 23px 10.5px 23px;
-}
-.reversed {
-        -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
-        /*http://snippetcentral.com/showing-reverse-image-css/*/
-}
-#latter-compositions-about h2{
-    font-size: 18.49px;
-    font-family: "Dosis";
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    line-height: 1.421;
-    text-align: center;
-    letter-spacing: 1.8px;
-    margin-top: 33px;
-    margin-bottom: 43px;
-}
-#latter-compositions-about p{
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: rgb(121, 130, 133);
-    line-height: 1.734;
-    text-align: center;
-    max-width: 515px;
-    margin: 0px auto 0px auto;
-}
-#latter-compositions-about p[class="subcontent"]{
-    font-family: "Open Sans";
-    color: rgb(86, 94, 97);
-    margin-top: 63px;
-    /*padding-bottom: 88px;*/
-}
-#slider-nav{
-    margin-top: -100px;
-    display: flex;
-    justify-content: center;
-}
-.fa-circle, .fa-circle-o{
-    font-weight: 100;
-    color: rgb(255, 255, 255);
-}
-.circle{
-    margin: 0px 19.25px 0px 19.25px;
-}
-.circle.open{
-    border-width: 1px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-radius: 50%;
-    width: 9px;
-    height: 9px;
-}
-.circle.closed{
-    border-width: 1px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    width: 9px;
-    height: 9px;
-}
-
-/**************************************************************/
-
-#new-tracks{
-    
-}
-#new-tracks aside{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: row wrap;
-    margin-left: calc(18vw - 12px);
-    margin-right: calc(18vw - 12px);
-    margin-top: 150px;
-    margin-bottom: -14px;
-}
-#new-tracks article{
-    width: 384px;
-    height: 422px;
-    margin: 14px 12px 14px 12px;
-    position: relative;
-}
-#new-tracks .slash.small{
-    width: 315px;
-    left: 35px;
-    position: absolute;
-}
-#new-tracks article p[class='title']{
-    margin-top: 5px;
+.fa-pause{
     color: #fff;
+    font-size: 22px;
 }
-#new-tracks article[id="first"]{
-    background: url("../images/event-background-1.png") no-repeat;
-}
-#new-tracks article[id="second"]{
-    background: url("../images/event-background-2.png") no-repeat;
-}
-#new-tracks article[id="third"]{
-    background: url("../images/event-background-3.png") no-repeat;
-}
-#new-tracks article[id="fourth"]{
-    background: url("../images/event-background-4.png") no-repeat;
-}
-#new-tracks article[id="fifth"]{
-    background: url("../images/event-background-5.png") no-repeat;
-}
-#new-tracks article[id="sixth"]{
-    background: url("../images/event-background-6.png") no-repeat;
-}
-#new-tracks article p, #new-tracks article h2{
-    margin-left: 35px;
-    max-width: 315px;
-}
-#new-tracks article p[class='date']{
-    margin-top: 30px;
-}
-/*****************************************************************************/
-section[id="upcoming-events"]{
-    height: 1311px;
-    background: url("../images/upcoming-events-background.png") no-repeat;
-    background-position: bottom;
-}
-#upcoming-events .main-title{
-    margin: 321px 0px 120px 0px;
-}
-#upcoming-events h1{
-    font-size: 50.49px;
-    font-family: "Dosis";
-    color: rgb(66, 113, 126);
-    text-transform: uppercase;
-    line-height: 1.174;
-    text-align: left;
-    margin: 0px;
-}
-.main-title .slash{
-    position: absolute;
-    left: -8px;
-    top: 26px;
-}
-#upcoming-events h2{
-    margin: 0px;
-}
-#upcoming-events .date{
-    margin: 4px 0px 20px 0px;
-}
-.slash.mini{
-    width: 135px;
-}
-.slash.vertical-top{
-    height: 50px;
-    width: 1px;
-    margin: 0px 36px 0px 35px;
-}
-.slash.vertical-bottom{
-    height: 165px;
-    margin: 0px 36px 20px 35px;
-    width: 1px;
-}
-
-#upcoming-events .main-title, #upcoming-events #event-info{
-    margin-left: 50vw;
-}
-/**********************************************************/
-section[id='history']{
-    height: 1250px;
-    text-align: center;
-    background: url("../images/history-background.png") no-repeat bottom;
-}
-.main-title#history {
-    font-size: 50.49px;
-    font-family: "Dosis";
-    color: rgb(91, 92, 90);
-    text-transform: uppercase;
-    line-height: 1.174;
-    text-align: center;
-    -moz-transform: matrix( 1.00034466841747,0,0,1,0,0);
-    -webkit-transform: matrix( 1.00034466841747,0,0,1,0,0);
-    -ms-transform: matrix( 1.00034466841747,0,0,1,0,0);
-    margin: 166px 0px 48px 0px;
-}
-#history .main-title .slash{
-    width: 270px;
-    position: absolute;
-    top: 27px;
-    left: -37px;
-}
-#history .opening-text{
-    display: block;
-    max-width: 815px;
-    margin: 0px auto 0px auto;
-    letter-spacing: 1.3px;
-}
-#history >.timeline{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    margin: 165px 30px 25px 30px;
-}
-/**Lesson learned: .class1.class2 effected by .class2 CSS
-        Must be careful about naming class names!! 
-**/
-#history .timeline-date{
-    margin: 0px;
-    padding: 0px;
-    font-size: 35.49px;
-    font-family: "Dosis";
-    font-weight: 200;
-    color: rgba(0, 0, 0, 0.278);
-    text-transform: uppercase;
-    line-height: 1.67;
-    text-align: center;
-    letter-spacing: 3.5px;
-    width: 130px;
-}
-#history .timeline-date#main{
-    color: rgb(87, 90, 89);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 0px 0px 0px;
-}
-.bullet{
-    /*Flexbox distorts shapes quite a bit; this is a problem.
-    SOLVED: CSS overlap issue; width was defined elsewhere.*/
-    width: 8px;
-    height: 8px;
-    background-color: rgb(90, 92, 91);
-    border-radius: 50%;
-    margin: 0px 30px 0px 30px;
-}
-
-.timeline.slash{
-    height: 1px;
-    border-width: 0px;
-    background-color: rgba(0, 0, 0, 0.278);
-    margin: 0px;
-    width: 145px;
-    position: static;
-}
-p[id="timeline-text"]{
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: rgb(90, 90, 88);
-    text-align: center;
-    margin: 0px auto 0px auto;
-    width: 207px;
-    letter-spacing: 0px;
-    font-weight: 300;
-}
-
-/**********************************************************************/
-section[id='contact']{
-    height: 981px;
-    background: url("../images/contact-background.png") no-repeat bottom;
-}
-
-.slash.vertical-contact{
-    width: 1px;
-    height: 193px;
-}
-#contact .main-title{
-    margin: 250px 0px 0px 50vw;
-    color: #454545;
-}
-#contact .main-title .slash{
-    left: 3px;
-}
-#contact section, #contact form{
-    margin-left: 50vw;
-}
-#contact-info{
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: rgb(123, 123, 123);
-    margin-bottom: 75px;
-    margin-top: 25px;
-}
-#contact-content{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-#contact form{
-    display: flex;
-    flex-flow: column nowrap;
-    width: 380px;
-    height: 222px;
-    justify-content: space-between;
-    margin-right: 120px;
-}
-input[type="text"]{
-    background: none;
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: rgb(123, 123, 123);
-    border-width: 0px 0px 1px 0px;
-    border-color: rgb(0,0,0);
-    padding: 0px 0px 5px 0px;
-}
-input[type="submit"]{
-    background: none;
-    border: none;
-    font-size: 20px;
-    font-family: "Open Sans";
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 53px;
-    height: 15px;
-    /*The lines below solved the issue of "SEND"
-    not fitting in its container.*/
-    padding: 0px;
-    line-height: 0px;
-    margin-top: -30px;
-}
-#contact aside{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    height: 193px;
-    margin-left: 26px;
-}
-
-#social-media a:link, #social-media a:visited, #social-media a:hover, #social-media a:active {
-    text-decoration: none;
-    font-size: 17px;
-    color: black;
+.fa-play{
+    color: #fff;
+    font-size: 22px;
 }
