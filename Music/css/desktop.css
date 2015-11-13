@@ -298,12 +298,7 @@ section[id='latter-compositions']{
     max-width: 700px;
     margin: 0px auto 155px auto;
 }
-.about-latter-compositions p{
-    font-size: 14px;
-    font-family: "Open Sans";
-    color: rgb(121, 130, 133);
-    line-height: 1.734;
-    text-align: center;
+#latter-compositions .opening-text{
     letter-spacing: 2px;
 }
 #latter-compositions #featured{
@@ -311,25 +306,28 @@ section[id='latter-compositions']{
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    max-width: 1200px;
 }
 .media-row{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
-    background-color: #f5f5f6;
     margin-bottom: 50px;
     align-items: center;
 }
 .media-row aside{
     flex: 1;
+    background-color: #f5f5f6;
+    height: 422px;
 }
 .media-row aside *{
     max-width: 500px;
+    /** review: what does the asterisk do? **/
 }
 .media-row aside >div{
     margin-left: 35px;
+    margin-top: 35px;
 }
 .media-row aside h2{
     line-height: 1.055;

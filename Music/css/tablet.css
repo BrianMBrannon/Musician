@@ -1,4 +1,22 @@
+/**
+A big challenge in formatting the tablet layout for this section was that
+I did not plain ahead to account for the different layouts.  I had to resort
+to absolute positioning for the aside; luckily it wasn't too serious.
+
+It's during this time that I realize that I cannot make this website "pixel
+perfect" because it was not designed with that possibility.  I must make
+design decisions.
+**/
+
 @media screen and (max-width: 1024px) {
+
+/********************* MAIN **********************/
+    .title{
+        font-size: 20px;
+    }
+    .opening-text{
+        font-size: 18px;
+    }
 
 /*****************  HEADER  *********************/
     #current-page{
@@ -9,5 +27,82 @@
     }
     header img{
         padding-top: 219px;
+    }
+/*****************  DISCOGRAPHY  *********************/
+    #discography #featured{
+        
+    }
+    #discography #featured >aside{
+        position: absolute;
+    }
+    #discography #featured >article{
+        margin-left: 0px;
+    }
+    #discography #featured aside .slash{
+        width: 66vw;
+    }
+    #discography #featured aside #_2010{
+        margin-top: -20px;
+    }
+    #featured aside #_2012{
+        /** 340 by default **/
+        margin-top: -10px;
+    }
+    #featured aside #_2015{
+        /** 320 default**/
+        margin-top: -40px;
+    }
+    #discography #first{
+        padding-top: 0px;
+    }
+    #discography #second{
+        padding-top: 0px;
+    }
+    #discography #featured article article span{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+/******************** CONCERT TOURS ***************************/
+    section[id="concert-tours"]{
+        background-position: left;
+        margin-bottom: -230px;
+        /** why is this extra margin necessary? **/
+    }
+    #concert-tours .main-title{
+        margin-top: 80px;
+    }
+    #concert-tours #featured{
+        margin-top: 240px;
+        width: 700px;
+        margin-left: 250px;
+    }
+    #concert-tours #featured article >p{
+        font-size: 21px;
+    }
+/*********************** LATTER COMPOSITIONS *****************/
+    section[id="latter-compositions"]{
+        height: 3220px;
+    }
+    #latter-compositions .main-title{
+        margin-top: 100px;
+    }
+    #latter-compositions #featured{
+        width: 700px;
+        margin-top: -50px;
+    }
+    #latter-compositions .media-row{
+        flex-direction: column;
+    }
+    .media-row aside{
+        width: 600px;
+    }
+    .media-row#second figure{
+        order: 2;
+        /** Woah!  I actually used the order attribute to
+        great effect.  I didn't think I ever would. Thanks flex! '**/
+    }
+    #latter-compositions .triangle{
+        display: none;
     }
 }
